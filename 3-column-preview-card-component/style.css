@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --card-orange: hsl(31, 77%, 52%);
+  --card-darkCyan: hsl(184, 100%, 22%);
+  --card-veryDarkCyan: hsl(179, 100%, 13%);
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+  --heading: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  /* display: grid;
+  grid-template-rows: repeat(1fr, 3); */
+
+  /* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+}
+
+.container section:first-child {
+  background-color: var(--card-orange);
+}
+
+.container section:nth-child(2) {
+  background-color: var(--card-darkCyan);
+}
+
+.container section:last-child {
+  background-color: var(--card-veryDarkCyan);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 40vh;
+  background-color: aqua;
+  border-radius: 0.5rem;
+}
+
+.card-container {
+  width: 60%;
+  height: 80%;
+}
+
+.img-container {
+  margin-bottom: 2.5rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: var(--heading);
+  font-family: "Big Shoulders Display", cursive;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--paragraph);
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.btn {
+  padding: 1.5rem 3rem;
+  border-radius: 40%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  transition: 1s all ease-in-out;
+}
+
+.btn:hover {
+  color: var(--paragraph);
+  cursor: pointer;
+  background-color: transparent;
+  outline: 0.2rem solid white;
+}
+
+@media screen and (min-width: 500px) {
+  .card {
+    width: 40vw;
+    height: 40vh;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card {
+    width: 18vw;
+    height: 55vh;
+  }
+
+  .img-container,
+  .heading,
+  .description {
+    margin-bottom: 3rem;
+  }
+
+  .heading {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+  }
+}
