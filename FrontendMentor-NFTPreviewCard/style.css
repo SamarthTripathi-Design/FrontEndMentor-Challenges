@@ -1,0 +1,120 @@
+/* - Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%) */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-container {
+  width: 22vw;
+  height: 80vh;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 10px;
+}
+
+.hero-img {
+  margin: 1.8rem;
+  border-radius: 5px;
+}
+
+.hero-img:hover {
+  background-color: green;
+}
+
+.heading {
+  font-size: 2.4rem;
+  color: #fff;
+  margin: 0 1.8rem 1.8rem 1.8rem;
+}
+
+.info {
+  font-size: 1.4rem;
+  color: hsl(215, 51%, 70%);
+  margin: 0 1.8rem 1.8rem 1.8rem;
+  line-height: 2rem;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1.8rem 1.8rem 1.8rem;
+}
+
+.etherium {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ETH {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  color: hsl(178, 100%, 50%);
+}
+
+.time-left {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  color: hsl(215, 51%, 70%);
+}
+
+.creation {
+  display: flex;
+  margin: 2rem;
+}
+
+.creator-img {
+  height: 3.5rem;
+}
+
+.create-info {
+  font-size: 1.3rem;
+  color: hsl(215, 51%, 70%);
+  margin: 0.8rem 0.8rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 0.8rem 0.8rem 0.8rem 0;
+}
+
+.line {
+  margin: 0 auto;
+  width: 90%;
+  border: 1px hsl(215, 51%, 70%) double;
+}
+
+.name:hover,
+.heading:hover {
+  color: cyan;
+  cursor: pointer;
+}

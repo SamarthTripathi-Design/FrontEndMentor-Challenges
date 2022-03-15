@@ -1,0 +1,140 @@
+/* ### Primary
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background: hsl(225, 100%, 98%) url(./images/pattern-background-desktop.svg)
+    no-repeat;
+
+  display: flex;
+  align-items: center;
+  height: 90vh;
+}
+
+.card-container {
+  max-width: 40vw;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5%;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 0.8rem;
+}
+
+.hero-img {
+  margin-bottom: 2rem;
+}
+
+.order-container {
+  width: 18rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-heading {
+  margin-bottom: 1rem;
+  letter-spacing: 0.05rem;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+
+.order-info {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+  line-height: 1.5rem;
+  letter-spacing: 0.02rem;
+}
+
+.price-plan {
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  background-color: hsl(225, 100%, 98%);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+  border-radius: 10%;
+}
+
+.price-heading {
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+
+.price {
+  color: hsl(224, 23%, 55%);
+}
+
+.price-change {
+  text-decoration: none;
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+  margin-left: 3rem;
+  transition: all 0.4s;
+}
+
+.price-change:hover {
+  border-bottom: 2px solid hsl(245, 75%, 52%);
+}
+
+.checkout {
+  width: 24rem;
+  font-weight: 700;
+  padding: 0.8rem;
+  border-radius: 5%;
+  margin-bottom: 1rem;
+  border: none;
+  outline: none;
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(225, 100%, 94%);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.checkout:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 1rem 5rem;
+}
+
+.cancel {
+  width: 24rem;
+  font-weight: 700;
+  padding: 0.8rem;
+  border-radius: 5%;
+  margin-bottom: 1rem;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: hsl(224, 23%, 55%);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.cancel:hover {
+  color: hsl(224, 23%, 45%);
+}
