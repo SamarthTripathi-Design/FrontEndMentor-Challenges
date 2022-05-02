@@ -81,7 +81,7 @@ font-family: 'Lexend Deca', sans-serif; */
 
 .btn {
   padding: 1.5rem 3rem;
-  border-radius: 40%;
+  border-radius: 100vw;
   outline: none;
   border: none;
   font-size: 1rem;
