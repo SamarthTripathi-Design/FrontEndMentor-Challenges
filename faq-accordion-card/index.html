@@ -11,7 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" />
+
     <title>Frontend Mentor | FAQ Accordion Card</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,116 +26,73 @@
     </style>
   </head>
   <body>
-    <main class="container">
-      <section class="img-container">
+    <section class="faq">
+      <section class="faq__img-container">
+        <div class="main-images-container">
+          <picture class="faq__woman-illustration">
+            <source
+              media="(max-width: 1109px )"
+              srcset="/images/illustration-woman-online-mobile.svg"
+            />
+            <source
+              media="(min-width: 1110px )"
+              srcset="/images/illustration-woman-online-desktop.svg"
+            />
+            <img
+              src="/images/illustration-woman-online-desktop.svg"
+              alt="illustration of a woman standing in front of a screen"
+            />
+          </picture>
+          <picture class="faq__shadow-illustration">
+            <source
+              media="(max-width: 1109px )"
+              srcset="./images/bg-pattern-mobile.svg"
+            />
+            <source
+              media="(min-width: 1110px )"
+              srcset="./images/bg-pattern-desktop.svg"
+            />
+            <img src="./images/bg-pattern-desktop.svg" alt="box shadow" />
+          </picture>
+        </div>
+
         <img
-          src="./images/illustration-woman-online-mobile.svg"
-          alt="image of a woman"
-          class="img-woman"
-        />
-        <img
-          src="./images/bg-pattern-mobile.svg"
-          alt="pattern"
-          class="img-pattern"
+          src="./images/illustration-box-desktop.svg"
+          alt=""
+          class="faq__box-illustration"
         />
       </section>
-      <div class="card">
-        <section class="text-container">
-          <h1 class="heading">FAQ</h1>
-          <section class="faq">
-            <h3 class="question" id="1" onclick="handleClick(this.id)">
-              How many team members can I invite?
-              <div class="icon-holder">
+
+      <section class="faq__text-container">
+        <h2 class="faq__heading">FAQ</h2>
+
+        <ul class="faq__faqs-list">
+          <li class="faq__faq-item">
+            <section class="faq-item__summary">
+              <p class="faq-item__description">
+                How many team members can I invite?
+              </p>
+              <div class="faq-item__arrow-container">
                 <img
-                  src="./images/icon-arrow-down.svg"
-                  alt=""
-                  class="down-arrow"
+                  src="/images/icon-arrow-down.svg"
+                  alt="arrow"
+                  class="faq-item__arrow-icon"
                 />
               </div>
-            </h3>
-            <p class="answer inactive">
+            </section>
+            <section class="faq-item__detail">
               You can invite up to 2 additional users on the Free plan. There is
               no limit on team members for the Premium plan.
-            </p>
-            <div class="line"></div>
-          </section>
-          <section class="faq">
-            <h3 class="question" id="2" onclick="handleClick(this.id)">
-              What is the maximum file upload size?
-              <div class="icon-holder">
-                <img
-                  src="./images/icon-arrow-down.svg"
-                  alt=""
-                  class="down-arrow"
-                />
-              </div>
-            </h3>
-            <p class="answer inactive">
-              No more than 2GB. All files in your account must fit your allotted
-              storage space.
-            </p>
-            <div class="line"></div>
-          </section>
-          <section class="faq">
-            <h3 class="question" id="3" onclick="handleClick(this.id)">
-              How do I reset my password?
-              <div class="icon-holder">
-                <img
-                  src="./images/icon-arrow-down.svg"
-                  alt=""
-                  class="down-arrow"
-                />
-              </div>
-            </h3>
-            <p class="answer inactive">
-              Click “Forgot password” from the login page or “Change password”
-              from your profile page. A reset link will be emailed to you.
-            </p>
-            <div class="line"></div>
-          </section>
-          <section class="faq">
-            <h3 class="question" id="4" onclick="handleClick(this.id)">
-              Can I cancel my subscription?
-              <div class="icon-holder">
-                <img
-                  src="./images/icon-arrow-down.svg"
-                  alt=""
-                  class="down-arrow"
-                />
-              </div>
-            </h3>
-            <p class="answer inactive">
-              Yes! Send us a message and we’ll process your request no questions
-              asked.
-            </p>
-            <div class="line"></div>
-          </section>
-          <section class="faq">
-            <h3 class="question" id="5" onclick="handleClick(this.id)">
-              Do you provide additional support?
-              <div class="icon-holder">
-                <img
-                  src="./images/icon-arrow-down.svg"
-                  alt=""
-                  class="down-arrow"
-                />
-              </div>
-            </h3>
-            <p class="answer inactive">
-              Chat and email support is available 24/7. Phone lines are open
-              during normal business hours.
-            </p>
-            <div class="line"></div>
-          </section>
-        </section>
-      </div>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Samarth</a>.
-      </div>
-    </main>
-    <script src="script.js"></script>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Samarth</a>.
+    </div>
   </body>
 </html>
