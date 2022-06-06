@@ -25,34 +25,61 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="card-container">
-      <div class="card">
-        <div class="image-container"></div>
-        <div class="info-container">
-          <div class="personal">
-            <h2 class="name">Victor Crest</h2>
-            <span class="age">26</span>
-            <p class="city">London</p>
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center vh-100"
+    >
+      <div
+        class="card overflow-hidden d-flex justify-content-center align-items-center"
+        style="width: 20rem"
+      >
+        <div class="bg-image-top position-relative">
+          <img src="/images/bg-pattern-card.svg" alt="" class="" />
+          <div class="profile-image">
+            <img
+              src="/images/image-victor.jpg"
+              alt=""
+              class="rounded-circle position-absolute top-100 start-50 translate-middle"
+            />
           </div>
-          <div class="socials">
-            <div class="stats">
-              <h2>80K</h2>
-              <p class="social-subtitle">Followers</p>
-            </div>
-            <div class="stats">
-              <h2>803K</h2>
-              <p class="social-subtitle">Likes</p>
-            </div>
-            <div class="stats">
-              <h2>1.4K</h2>
-              <p class="social-subtitle">Photos</p>
-            </div>
+        </div>
+
+        <div
+          class="info mt-5 pt-2 d-flex justify-content-center align-items-center flex-column"
+        >
+          <div
+            class="personal d-flex justify-content-center align-items-center"
+          >
+            <h2 class="name">Victor Crest</h2>
+            <span class="age ms-2 mb-2">26</span>
+          </div>
+          <p class="city">London</p>
+        </div>
+
+        <div class="socials d-flex justify-content-center align-items-center">
+          <div class="stats">
+            <h2>80K</h2>
+            <p class="social-subtitle">Followers</p>
+          </div>
+          <div class="stats">
+            <h2>803K</h2>
+            <p class="social-subtitle">Likes</p>
+          </div>
+          <div class="stats">
+            <h2>1.4K</h2>
+            <p class="social-subtitle">Photos</p>
           </div>
         </div>
       </div>
-    </main>
+    </div>
 
     <div class="attribution">
       Challenge by
@@ -60,5 +87,10 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
