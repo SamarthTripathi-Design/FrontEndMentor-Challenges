@@ -6,7 +6,7 @@
 - Soft blue: hsl(215, 51%, 70%)
 - Cyan: hsl(178, 100%, 50%) */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
 * {
   margin: 0;
@@ -24,27 +24,60 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Roboto", sans-serif;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
 }
 
 .card-container {
-  width: 22vw;
-  height: 80vh;
+  width: 18vw;
+  height: 64vh;
   background-color: hsl(216, 50%, 16%);
   border-radius: 10px;
 }
 
-.hero-img {
-  margin: 1.8rem;
+.img-container {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
   border-radius: 5px;
+  position: relative;
+}
+
+.hero-img {
+  border-radius: 5px;
+  position: relative;
+}
+
+.image-overlay {
+  background-color: hsla(178, 100%, 50%, 0.302);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  top: 10;
+  left: 10;
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+  transition: 0.33s ease-in-out;
+}
+
+.image-overlay:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.image-overlay__icon {
+  width: 50px;
 }
 
 .hero-img:hover {
-  background-color: green;
+  cursor: pointer;
 }
 
 .heading {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   color: #fff;
   margin: 0 1.8rem 1.8rem 1.8rem;
 }
@@ -52,7 +85,7 @@ body {
 .info {
   font-size: 1.4rem;
   color: hsl(215, 51%, 70%);
-  margin: 0 1.8rem 1.8rem 1.8rem;
+  margin: 0 2rem 1.8rem 2rem;
   line-height: 2rem;
 }
 
@@ -110,7 +143,7 @@ h4 {
 .line {
   margin: 0 auto;
   width: 90%;
-  border: 1px hsl(215, 51%, 70%) double;
+  border-bottom: 1px hsl(215, 51%, 70%) solid;
 }
 
 .name:hover,
