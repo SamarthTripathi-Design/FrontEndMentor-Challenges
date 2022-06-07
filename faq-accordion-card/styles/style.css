@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 html {
-  /* Fonts */
   font-family: "Kumbh Sans", sans-serif;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
@@ -10,26 +9,21 @@ html {
   --font-size-summary-detail: 1.2rem;
   --line-height-summary-detail: 1.8rem;
 
-  /* Colors */
-  /* blue */
   --dark-des-blue: hsl(238, 29%, 16%);
   --very-dark-gray-blue: hsl(237, 12%, 33%);
   --dark-gray-blue: hsl(240, 6%, 50%);
   --light-gray-blue: hsl(240, 5%, 91%);
   --soft-blue: hsl(240, 73%, 65%);
-  /* violet & red */
+
   --red: hsl(14, 88%, 65%);
   --violet: hsl(273, 75%, 66%);
-  /* background */
+
   --background-col: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
 
-  /* z-index */
   --z-index-main: 10;
   --z-index-secondary: 5;
   --z-index-lowest: 1;
 }
-
-/* Body */
 
 body {
   width: 100%;
@@ -38,8 +32,6 @@ body {
   place-items: center;
   background: var(--background-col);
 }
-
-/* Main Section styling */
 
 section.faq {
   background: white;
@@ -61,11 +53,6 @@ section.faq {
     min-height: 50.9rem;
   }
 }
-
-
-/* Images */
-
-/* Image containers */
 
 section.faq__img-container {
   width: 100%;
@@ -90,8 +77,6 @@ section.faq__img-container {
     overflow: hidden;
   }
 }
-
-/* Main images (woman + shadow) */
 
 .main-images-container > picture {
   grid-area: images;
@@ -128,8 +113,6 @@ picture.faq__shadow-illustration img {
   }
 }
 
-/* Box image */
-
 img.faq__box-illustration {
   display: none;
   grid-area: image-containers;
@@ -143,9 +126,6 @@ img.faq__box-illustration {
   }
 }
 
-
-/* Text */
-  /* Text Container */
 section.faq__text-container {
   padding: 0 2.4rem 4.8rem;
   display: flex;
@@ -161,8 +141,6 @@ section.faq__text-container {
     align-items: flex-start;
   }
 }
-
-/* Text Styling */
 
 .faq__heading {
   font-size: var(--font-size-heading);
