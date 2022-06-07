@@ -1,49 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 2rem;
+        color: aliceblue;
+      }
+      .attribution a {
+        color: white
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-rating">
+        <div class="star">
+          <img src="/images/icon-star.svg" alt="icon star" height="12" />
+        </div>
+        <div class="info">
+          <span class="heading">How did we do?</h2>
+          <p class="description">
+            Please let us know how we did with your support <br />
+            request. All feedback is appreciated to help us <br />
+            improve our offering!
+          </p>
+        </div>
+        <div class="ratings">
+        <button class="btn-num">1</button>
+          <button class="btn-num">2</button>
+          <button class="btn-num">3</button>
+          <button class="btn-num">4</button>
+          <button class="btn-num">5</button>
+            </div>
+        <div class="submit">
+          <button class="btn-submit">SUBMIT</button>
+        </div>
+        </div>
   
-  <title>Frontend Mentor | Interactive rating component</title>
+        <div class="card-thankyou hide">
+          <div class="img-container">
+            <img src="/images/illustration-thank-you.svg" alt="" />
+          </div>
+          <div class="result">
+            <div>You selected <span class="score"> </span> out of 5</div>
+          </div>
+          <div class="info info-thankyou">
+            <span class="heading">Thank you!</span>
+            <p class="description desc-thankyou">
+              We appreciate you taking the time to give a rating. <br />
+              If you ever need more support, don’t hesitate to <br />
+              get in touch!
+            </p>
+          </div>
+        </div>   
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
 
-  <!-- Rating state start -->
 
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
+      </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Samarth</a>.
+        </div>
+      </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <script src="script.js"></script>
+  </body>
 </html>
