@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  background-color: var(--Dark-Blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--Dark-Grayish-Blue);
+  max-width: 25vw;
+  min-height: 20vh;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.advice-id {
+  color: var(--Neon-Green);
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.advice {
+  color: var(--Light-Cyan);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  height: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.dice-btn {
+  background-color: var(--Neon-Green);
+  padding: 1rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 90%;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.dice-btn:hover {
+  box-shadow: 0px 0px 10px var(--Neon-Green);
+}
+
+.dice {
+  height: 1.5rem;
+}
+
+@media screen and (max-width: 1350px) {
+  .divider {
+    height: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    max-width: 50vw;
+    min-height: 40vh;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .divider {
+    height: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    max-width: 70vw;
+    min-height: 40vh;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .divider {
+    height: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    max-width: 80vw;
+    min-height: 40vh;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    position: relative;
+  }
+
+  .dice-btn {
+    padding: 1.5rem;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 90%;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+  }
+
+  .advice-id {
+    color: var(--Neon-Green);
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .advice {
+    color: var(--Light-Cyan);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
