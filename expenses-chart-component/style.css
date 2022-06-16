@@ -13,7 +13,9 @@
   --Very-pale-orange: hsl(33, 100%, 98%);
 
   --Soft-red: hsl(10, 79%, 65%);
+  --light-red: hsl(10, 58%, 75%);
   --Cyan: hsl(186, 34%, 60%);
+  --light-Cyan: hsl(186, 35%, 70%);
 }
 
 html {
@@ -31,13 +33,13 @@ html {
 }
 
 .card-top {
-  min-width: 20vw;
+  min-width: 22vw;
   background-color: var(--Soft-red);
   border-radius: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 2rem;
   color: var(--Very-pale-orange);
   margin-bottom: 2rem;
 }
@@ -49,8 +51,8 @@ html {
 }
 
 .balance-amt {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.3rem;
+  font-weight: 600;
 }
 
 .logo {
@@ -59,9 +61,9 @@ html {
 
 .card-bottom {
   background-color: var(--Very-pale-orange);
-  min-width: 20vw;
+  min-width: 22vw;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .primary-heading-bottom,
@@ -79,7 +81,7 @@ html {
 .secondary-heading-bottom,
 .month {
   color: var(--Medium-brown);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .expense {
@@ -90,4 +92,92 @@ html {
 .varience {
   font-size: 1rem;
   font-weight: 600;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  height: 17em;
+  gap: 0.2em;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.chart-wrapper {
+  width: 3.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+.chart-graph {
+  height: var(--height);
+  background: var(--Soft-red);
+  width: 100%;
+  border-radius: 0.25em;
+  transition: all 1s;
+}
+.chart:hover .chart-value {
+  opacity: 1;
+}
+
+.chart-graph:hover {
+  background-color: var(--light-red);
+  cursor: pointer;
+}
+
+.chart-graph.active {
+  background: var(--Cyan);
+}
+
+.chart-graph.active:hover {
+  background: var(--light-Cyan);
+  cursor: pointer;
+}
+
+.chart-title {
+  color: var(--Dark-brown);
+  font-size: em;
+}
+
+.line {
+  border-bottom: 1px solid var(--Cream);
+  margin: 1.5rem 0rem;
+}
+
+.chart-value {
+  text-align: center;
+  opacity: 0;
+  padding: 10%;
+  font-weight: 700;
+  color: white;
+  border-radius: 5px;
+  width: auto;
+  background-color: var(--Dark-brown);
+  transition: all 1s;
+}
+
+@media screen and (max-width: 500px) {
+  .chart-wrapper {
+    width: 2.8em;
+  }
+
+  .chart {
+    height: 17em;
+    gap: 1em;
+  }
+  .card-bottom {
+    min-width: 80vw;
+  }
+
+  .card-top {
+    min-width: 80vw;
+  }
 }
