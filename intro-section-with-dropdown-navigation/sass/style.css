@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 2rem;
+}
+.nav-bar .logo {
+  height: 2.5rem;
+}
+.nav-bar .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5rem;
+  min-width: 85vw;
+}
+.nav-bar .links .list {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.2rem;
+  list-style: none;
+  position: relative;
+}
+.nav-bar .links .icon-down {
+  margin-left: 0.5rem;
+  height: 0.5rem;
+}
+.nav-bar .links a:link,
+.nav-bar .links a:visited,
+.nav-bar .links a:active {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+}
+.nav-bar .links .sub-list {
+  position: absolute;
+  list-style: none;
+  min-width: 10rem;
+  padding: 1.5rem;
+  left: -6rem;
+  top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px #888;
+  z-index: 100;
+  border-radius: 10px;
+  opacity: 1;
+}
+.nav-bar .links .feature-sublist {
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  background-color: white;
+  z-index: 2;
+  opacity: 1;
+}
+.nav-bar .links a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.nav-bar .links .login {
+  outline: none;
+  border: none;
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 41%);
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.nav-bar .links .login:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.nav-bar .links .register {
+  outline: none;
+  border-radius: 10px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  margin-left: 3rem;
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 41%);
+  cursor: pointer;
+  border: 2px solid hsl(0deg, 0%, 41%);
+}
+.nav-bar .links .register:hover {
+  color: hsl(0deg, 0%, 8%);
+  border: 2px solid hsl(0deg, 0%, 8%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  flex: 1.4;
+  margin: 5rem 0rem 0rem 5rem;
+  padding: 6rem 0rem 0rem 8rem;
+}
+
+.image {
+  flex: 1;
+  margin: 5rem;
+}
+
+.img-hero {
+  height: 75vh;
+}
+
+.heading {
+  font-size: 8rem;
+}
+
+.description {
+  font-size: 1.8rem;
+  color: hsl(0deg, 0%, 41%);
+  margin-top: 5rem;
+  line-height: 3rem;
+}
+
+.btn {
+  outline: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  font-size: 2rem;
+  margin-top: 5rem;
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 98%);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  color: hsl(0deg, 0%, 8%);
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+.clients {
+  margin-top: 8rem;
+}
+
+.client-img {
+  height: 2.5rem;
+  margin-right: 4rem;
+}/*# sourceMappingURL=style.css.map */

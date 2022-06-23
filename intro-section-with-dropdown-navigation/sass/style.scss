@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+$Almost-White: hsl(0, 0%, 98%);
+$Medium-Gray: hsl(0, 0%, 41%);
+$Almost-Black: hsl(0, 0%, 8%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Epilogue", sans-serif;
+  background-color: $Almost-White;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+
+  min-height: 2.5rem;
+  padding: 2rem;
+
+  .logo {
+    height: 2.5rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5rem;
+    min-width: 85vw;
+
+    .list {
+      display: flex;
+      gap: 2rem;
+      font-size: 1.2rem;
+      list-style: none;
+      position: relative;
+    }
+
+    .icon-down {
+      margin-left: 0.5rem;
+      height: 0.5rem;
+    }
+
+    a:link,
+    a:visited,
+    a:active {
+      text-decoration: none;
+      color: $Medium-Gray;
+    }
+
+    .sub-list {
+      position: absolute;
+      list-style: none;
+      min-width: 10rem;
+      padding: 1.5rem;
+      left: -6rem;
+      top: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 10px #888;
+      z-index: 100;
+      border-radius: 10px;
+      opacity: 1;
+    }
+
+    .feature-sublist {
+      padding: 1.2rem;
+      font-size: 1.5rem;
+      background-color: white;
+      z-index: 2;
+      opacity: 1;
+    }
+    a:hover {
+      color: $Almost-Black;
+    }
+
+    .login {
+      outline: none;
+      border: none;
+      background-color: $Almost-White;
+      color: $Medium-Gray;
+      padding: 0.3rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .login:hover {
+      color: $Almost-Black;
+    }
+
+    .register {
+      outline: none;
+      border-radius: 10px;
+      padding: 0.6rem 1.5rem;
+      font-size: 1.2rem;
+      margin-left: 3rem;
+      background-color: $Almost-White;
+      color: $Medium-Gray;
+      cursor: pointer;
+      border: 2px solid $Medium-Gray;
+    }
+
+    .register:hover {
+      color: $Almost-Black;
+      border: 2px solid $Almost-Black;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  flex: 1.4;
+
+  margin: 5rem 0rem 0rem 5rem;
+  padding: 6rem 0rem 0rem 8rem;
+}
+
+.image {
+  flex: 1;
+  margin: 5rem;
+}
+
+.img-hero {
+  height: 75vh;
+}
+
+.heading {
+  font-size: 8rem;
+}
+
+.description {
+  font-size: 1.8rem;
+  color: $Medium-Gray;
+  margin-top: 5rem;
+  line-height: 3rem;
+}
+
+.btn {
+  outline: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  font-size: 2rem;
+  margin-top: 5rem;
+  background-color: $Almost-Black;
+  color: $Almost-White;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  color: $Almost-Black;
+  background-color: $Almost-White;
+}
+
+.clients {
+  margin-top: 8rem;
+}
+
+.client-img {
+  height: 2.5rem;
+  margin-right: 4rem;
+}
