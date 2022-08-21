@@ -3,10 +3,12 @@ let featurelist = document.querySelector(".feature-list");
 let company = document.querySelector(".company");
 let companylist = document.querySelector(".company-list");
 
-const a = document.querySelector("a");
-a.onclick = (e) => {
-  e.preventDefault();
-};
+const a = document.querySelectorAll("a");
+a.forEach((a) => {
+  a.onclick = (e) => {
+    e.preventDefault();
+  };
+});
 
 feature.onclick = () => {
   if (featurelist.classList.contains("hide")) {
