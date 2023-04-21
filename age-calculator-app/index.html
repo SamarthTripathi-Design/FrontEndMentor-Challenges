@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <form action="" onsubmit="handleForm()" id="myForm">
+          <div class="date__container">
+            <div class="day__input">
+              <label for="day" id="day__label" class="label-default">DAY</label>
+              <input
+                type="text"
+                id="day"
+                name="day"
+                placeholder="DD"
+                maxlength="2"
+                class="input-default"
+              />
+              <p id="day__error"></p>
+            </div>
+            <div class="month__input">
+              <label for="month" id="month__label" class="label-default"
+                >MONTH</label
+              >
+              <input
+                type="text"
+                id="month"
+                name="month"
+                placeholder="MM"
+                maxlength="2"
+                class="input-default"
+              />
+              <p id="month__error"></p>
+            </div>
+            <div class="year__input">
+              <label for="year" id="year__label" class="label-default"
+                >YEAR</label
+              >
+              <input
+                type="text"
+                id="year"
+                name="year"
+                placeholder="YYYY"
+                maxlength="4"
+                class="input-default"
+              />
+              <p id="year__error"></p>
+            </div>
+          </div>
+          <div class="edit__container">
+            <div class="line"></div>
+            <button id="submit-btn" type="submit">
+              <img src="./assets/images/icon-arrow.svg" alt="img" />
+            </button>
+          </div>
+        </form>
+        <div class="display__container">
+          <div class="year__display">
+            <p class="year__display-value">--</p>
+            <p class="year__display-text">years</p>
+          </div>
+          <div class="month__display">
+            <p class="month__display-value">--</p>
+            <p class="month__display-text">months</p>
+          </div>
+          <div class="day__display">
+            <p class="day__display-value">--</p>
+            <p class="day__display-text">days</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
