@@ -7,7 +7,6 @@ function handleForm(event) {
 
   const dateString = month + "/" + day + "/" + year;
   console.log(dateString);
-
   if (formErrorValidation(day, month, year)) {
     if (isDateValid(dateString)) {
       convertdate(dateString);
@@ -57,11 +56,11 @@ const formErrorValidation = (day, month, year) => {
 };
 
 const isDateValid = (date) => {
-  var dateString = date.replace(/\D/g, "");
+  var dateString = date.split("/");
   // Parse integer values from the date string
-  var year = parseInt(dateString.slice(4, 8));
-  var month = parseInt(dateString.slice(0, 2));
-  var day = parseInt(dateString.slice(2, 4));
+  var year = parseInt(dateString[2]);
+  var month = parseInt(dateString[0]);
+  var day = parseInt(dateString[1]);
   // Define the number of days per month
   var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   // Leap years

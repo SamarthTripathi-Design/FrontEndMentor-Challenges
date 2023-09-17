@@ -33,7 +33,7 @@ body {
 }
 
 .card {
-  height: 80%;
+  height: 90%;
   width: 70%;
   background-color: var(--White);
   border-radius: 1vw 1vw 10vw 1vw;
@@ -120,7 +120,7 @@ v input::-webkit-inner-spin-button {
 }
 
 .display__container {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 input[type="text"] {
@@ -173,6 +173,3 @@ input[type="text"] {
 #submit-btn:active {
   background-color: var(--Off-black);
 }
-
-/* @media only screen and (max-width: 600px) {
-} */
