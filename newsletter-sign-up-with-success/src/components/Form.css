@@ -10,7 +10,8 @@
   --Light-Tomato: hsl(4, 70%, 90%);
 }
 
-.form__container {
+.form__container,
+.card-container {
   background-color: var(--Charcoal-Grey);
   height: 100vh;
   width: 100vw;
@@ -34,7 +35,9 @@
   margin: 40px 20px;
 }
 
-.heading-info {
+.heading-info,
+.response-info {
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   margin: 15px 0px;
 }
@@ -44,7 +47,9 @@
   font-size: 14px;
 }
 
-.primary-heading {
+.primary-heading,
+.response-heading {
+  font-family: "Roboto", sans-serif;
   font-size: 50px;
   color: var(--Dark-Slate-Grey);
 }
@@ -89,7 +94,8 @@
   margin-right: 40px;
 }
 
-.btn-submit {
+.btn-submit,
+.dismiss-btn {
   background-color: var(--Dark-Slate-Grey);
   color: var(--White);
   padding: 15px 55px;
@@ -110,7 +116,6 @@
 
 .error-input {
   background-color: var(--Light-Tomato);
-
   color: var(--Tomato);
   border: 1px solid var(--Tomato);
 }
@@ -121,7 +126,19 @@
   border: 1px solid var(--Charcoal-Grey);
 }
 
-.btn-submit:hover {
+.btn-submit:hover,
+.dismiss-btn:hover {
   cursor: pointer;
   background: linear-gradient(to right, hsl(333, 69%, 60%), hsl(4, 97%, 65%));
+}
+
+.submission-card {
+  height: 50%;
+  width: 25%;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
 }

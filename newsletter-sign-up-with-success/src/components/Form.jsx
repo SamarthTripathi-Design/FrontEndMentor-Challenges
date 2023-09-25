@@ -3,7 +3,7 @@ import "./Form.css";
 
 const Form = () => {
   const [email, setEmail] = useState("");
-  const [active, setActive] = useState("first");
+  const [active, setActive] = useState("second");
   const [error, setError] = useState(false);
 
   const handleInputChange = (e) => {
@@ -18,6 +18,11 @@ const Form = () => {
       setActive("first");
       setError(true);
     }
+  };
+
+  const handleDismissClick = () => {
+    setEmail("");
+    setActive("first");
   };
 
   function validateEmail(emailId) {
@@ -103,21 +108,26 @@ const Form = () => {
       </div>
     </>
   ) : (
-    <></>
+    <>
+      <div className="card-container">
+        <div className="submission-card">
+          <img
+            src="../../assets/images/icon-list.svg"
+            className="image"
+            alt=""
+          />
+          <h3 className="response-heading">Thanks for subscribing!</h3>
+          <p className="response-info">
+            A confirmation email has been sent to ash@loremcompany.com. Please
+            open it and click the button inside to confirm your subscription.
+          </p>
+          <button className="dismiss-btn" onClick={handleDismissClick}>
+            Dismiss message
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 
 export default Form;
-
-// Stay updated! Join 60,000+ product managers receiving monthly updates on:
-// Product discovery and building what matters Measuring to ensure updates are
-// a success And much more! Email address email@company.com Subscribe to
-// monthly newsletter
-
-// <!-- Sign-up form end -->
-
-// <!-- Success message start -->
-
-// Thanks for subscribing! A confirmation email has been sent to
-// ash@loremcompany.com. Please open it and click the button inside to confirm
-// your subscription. Dismiss message
