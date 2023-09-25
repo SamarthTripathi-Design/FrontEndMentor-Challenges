@@ -3,7 +3,7 @@ import "./Form.css";
 
 const Form = () => {
   const [email, setEmail] = useState("");
-  const [active, setActive] = useState("second");
+  const [active, setActive] = useState("first");
   const [error, setError] = useState(false);
 
   const handleInputChange = (e) => {
