@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/* */
+
+:root {
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --Tomato: hsl(4, 97%, 65%);
+  --Light-Tomato: hsl(4, 70%, 90%);
+}
+
+.form__container {
+  background-color: var(--Charcoal-Grey);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__card {
+  height: 70%;
+  width: 55%;
+  background-color: var(--White);
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.form__card-info {
+  font-family: "Roboto", sans-serif;
+  margin: 40px 20px;
+}
+
+.heading-info {
+  font-size: 14px;
+  margin: 15px 0px;
+}
+
+.info-list li {
+  list-style: none;
+  font-size: 14px;
+}
+
+.primary-heading {
+  font-size: 50px;
+  color: var(--Dark-Slate-Grey);
+}
+
+.form__card-hero {
+  background-image: url("../../assets/images/illustration-sign-up-desktop.svg");
+  background-repeat: no-repeat;
+  min-height: 100%;
+  min-width: 50%;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image {
+  width: 20px;
+  height: 20px;
+}
+
+.list {
+  display: flex;
+  margin: 15px 0px;
+}
+
+.inputbox-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 20px 0px;
+}
+
+.email-label {
+  font-size: 10px;
+  font-weight: 700;
+  margin: 5px 40px 5px 0px;
+}
+
+.email-input {
+  outline: none;
+  border: 1px solid var(--Grey);
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 40px;
+}
+
+.btn-submit {
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  padding: 15px 55px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  outline: none;
+}
+
+.label-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-label {
+  color: var(--Tomato);
+}
+
+.error-input {
+  background-color: var(--Light-Tomato);
+
+  color: var(--Tomato);
+  border: 1px solid var(--Tomato);
+}
+
+.email-input:hover,
+.email-input:active {
+  cursor: pointer;
+  border: 1px solid var(--Charcoal-Grey);
+}
+
+.btn-submit:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, hsl(333, 69%, 60%), hsl(4, 97%, 65%));
+}
