@@ -48,7 +48,7 @@
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .primary-btn {
@@ -56,7 +56,21 @@
   color: var(--White);
   padding: 12px 15px;
   border-radius: 10px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
   cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.seconday-btn {
+  outline: none;
+  border: none;
+  background-color: var(--White);
+  color: var(--Marine-blue);
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
 }
