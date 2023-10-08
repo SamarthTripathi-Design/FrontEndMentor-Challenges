@@ -58,7 +58,7 @@ const InfoForm = () => {
           Please provide your name, email address, and phone number.
         </p>
       </div>
-      <div className="body-container">
+      <div className="body-info-container">
         <div className="label-container">
           <label htmlFor="Username" className="form-label">
             Name

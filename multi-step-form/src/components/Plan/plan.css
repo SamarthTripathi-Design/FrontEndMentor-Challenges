@@ -1,0 +1,77 @@
+.subs-cards-container {
+  display: flex;
+  gap: 10px;
+  height: 70%;
+  width: 100%;
+}
+
+.subs-card {
+  border: 1px solid var(--Light-gray);
+  height: 80%;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subs-card:hover {
+  transition: all 1s ease-in-out;
+  border: 1px solid var(--Marine-blue);
+  cursor: pointer;
+}
+
+.active {
+  transition: all 1s ease-in-out;
+  border: 1px solid var(--Marine-blue);
+  cursor: pointer;
+}
+
+.subs-card-img-1 {
+  background-image: url("../../../public/assets/images/icon-arcade.svg");
+  background-repeat: no-repeat;
+  height: 50px;
+}
+
+.subs-card-img-2 {
+  background-image: url("../../../public/assets/images/icon-advanced.svg");
+  background-repeat: no-repeat;
+  height: 50px;
+}
+
+.subs-card-img-3 {
+  background-image: url("../../../public/assets/images/icon-pro.svg");
+  background-repeat: no-repeat;
+  height: 50px;
+}
+
+.img-heading {
+  color: var(--Marine-blue);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.price {
+  color: var(--Cool-gray);
+  font-size: 13px;
+  margin: 5px 0px;
+}
+
+.toggle {
+  background-color: var(--Alabaster);
+  height: 40px;
+  border-radius: 10px;
+}
+
+.subs-free {
+  font-size: 12px;
+  color: var(--Marine-blue);
+}
+
+.subs-card > .sub-info-container,
+.subs-card > .subs-card-img-1,
+.subs-card > .subs-card-img-2,
+.subs-card > .subs-card-img-3 {
+  pointer-events: none;
+}

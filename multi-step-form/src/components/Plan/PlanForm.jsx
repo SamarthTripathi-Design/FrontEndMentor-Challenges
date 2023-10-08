@@ -1,26 +1,35 @@
 import React, { useContext, useState } from "react";
 import FormContext from "../../FormContext";
 import { useNavigate } from "react-router-dom";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
 const InfoForm = () => {
   const navigate = useNavigate();
-  const { activeTab, setActiveTab } = useContext(FormContext);
-  const [formData, setFormData] = useState({
-    UserName: "",
-    Email: "",
-    PhoneNum: "",
-  });
-  const [error, setError] = useState({
-    UserName: false,
-    Email: false,
-    PhoneNum: false,
-  });
+  const { yearly, setYearly, activeCardData, setActiveCardData } =
+    useContext(FormContext);
+  const [activeCard, setActiveCard] = useState("");
 
   const handleBackclick = () => {
     navigate("/PersonalInfo");
   };
 
-  const handleSubmitClick = () => {};
+  const handleSubmitClick = () => {
+    if (activeCardData.price !== "") {
+      navigate("/AddOns");
+    }
+  };
+
+  const handleToggle = (e) => {
+    setYearly(e.target.checked);
+  };
+
+  const handleCardClick = (e) => {
+    setActiveCardData({
+      imgInfo: e.target.childNodes[1].childNodes[0].innerText,
+      price: e.target.childNodes[1].childNodes[1].innerText,
+    });
+    setActiveCard(e.target.childNodes[1].childNodes[0].innerText);
+  };
 
   return (
     <div className="form-container">
@@ -30,7 +39,72 @@ const InfoForm = () => {
           You have the option of monthly or yearly billing.
         </p>
       </div>
-      <div className="body-container"></div>
+      <div className="body-plan-container">
+        <div className="subs-cards-container">
+          <div
+            className={
+              activeCard === "Arcade" ? "subs-card  active" : "subs-card"
+            }
+            onClick={handleCardClick}
+          >
+            <div className="subs-card-img-1"></div>
+            <div className="sub-info-container">
+              <div className="img-heading">Arcade</div>
+              {yearly ? (
+                <>
+                  <div className="price">$90/yr</div>
+                  <div className="subs-free">2 months free</div>
+                </>
+              ) : (
+                <div className="price">$9/mo</div>
+              )}
+            </div>
+          </div>
+          <div
+            className={
+              activeCard === "Advanced" ? "subs-card  active" : "subs-card"
+            }
+            onClick={handleCardClick}
+          >
+            <div className="subs-card-img-2"></div>
+            <div className="sub-info-container">
+              <div className="img-heading">Advanced</div>
+              {yearly ? (
+                <>
+                  <div className="price">$120/yr</div>
+                  <div className="subs-free">2 months free</div>
+                </>
+              ) : (
+                <div className="price">$12/mo</div>
+              )}
+            </div>
+          </div>
+          <div
+            className={activeCard === "Pro" ? "subs-card  active" : "subs-card"}
+            onClick={handleCardClick}
+          >
+            <div className="subs-card-img-3"></div>
+            <div className="sub-info-container">
+              <div className="img-heading">Pro</div>
+              {yearly ? (
+                <>
+                  <div className="price">$150/yr</div>
+                  <div className="subs-free">2 months free</div>
+                </>
+              ) : (
+                <div className="price">$15/mo</div>
+              )}
+            </div>
+          </div>
+        </div>
+        <div className="toggle">
+          <ToggleSwitch
+            label1="Monthly"
+            label2="Yearly"
+            onClick={handleToggle}
+          />
+        </div>
+      </div>
       <div className="footer-container">
         <button className="seconday-btn" onClick={handleBackclick}>
           Go Back
