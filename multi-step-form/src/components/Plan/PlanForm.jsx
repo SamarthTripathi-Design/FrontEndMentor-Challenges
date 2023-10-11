@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import FormContext from "../../FormContext";
 import { useNavigate } from "react-router-dom";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";

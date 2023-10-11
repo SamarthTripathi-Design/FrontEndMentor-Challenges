@@ -10,6 +10,7 @@ const SummaryForm = () => {
 
   useEffect(() => {
     calculateTotal();
+    // eslint-disable-next-line
   }, []);
 
   const handleSubmitClick = () => {
