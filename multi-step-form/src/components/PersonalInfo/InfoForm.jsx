@@ -4,12 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const InfoForm = () => {
   const navigate = useNavigate();
-  const { activeTab, setActiveTab } = useContext(FormContext);
-  const [formData, setFormData] = useState({
-    UserName: "",
-    Email: "",
-    PhoneNum: "",
-  });
+  const { formData, setFormData } = useContext(FormContext);
   const [error, setError] = useState({
     UserName: false,
     Email: false,

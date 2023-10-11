@@ -1,62 +1,47 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import FormContext from "../../FormContext";
 import { useNavigate } from "react-router-dom";
 
 const AddOnsForm = () => {
   const navigate = useNavigate();
-  const { yearly, setAddOnsData } = useContext(FormContext);
-  const [activeAddonsCard, setactiveAddonsCard] = useState({
-    checkbox1: false,
-    checkbox2: false,
-    checkbox3: false,
-  });
+  const { yearly, setAddOnsData, activeAddonsCard, setactiveAddonsCard } =
+    useContext(FormContext);
 
   const handleSubmitClick = () => {
+    let addonarray = [];
     if (yearly) {
       if (activeAddonsCard.checkbox1) {
-        setAddOnsData((prevState) => [
-          ...prevState,
-          { addonName: "Online service", addonPrice: "+$10/yr" },
-        ]);
+        addonarray.push({ addonName: "Online service", addonPrice: "+$10/yr" });
       }
       if (activeAddonsCard.checkbox2) {
-        setAddOnsData((prevState) => [
-          ...prevState,
-          { addonName: "Larger storage", addonPrice: "+$20/yr" },
-        ]);
+        addonarray.push({ addonName: "Larger storage", addonPrice: "+$20/yr" });
       }
       if (activeAddonsCard.checkbox3) {
-        setAddOnsData((prevState) => [
-          ...prevState,
-          {
-            addonName: "Customizable Profile",
-            addonPrice: "+$20/yr",
-          },
-        ]);
+        addonarray.push({
+          addonName: "Customizable Profile",
+          addonPrice: "+$20/yr",
+        });
       }
     } else {
       if (activeAddonsCard.checkbox1) {
-        setAddOnsData((prevState) => [
-          ...prevState,
-          { addonName: "Online service", addonPrice: "+$1/mo" },
-        ]);
+        addonarray.push({ addonName: "Online service", addonPrice: "+$1/mo" });
       }
       if (activeAddonsCard.checkbox2) {
-        setAddOnsData((prevState) => [
-          ...prevState,
-          { addonName: "Larger storage", addonPrice: "+$2/mo" },
-        ]);
+        addonarray.push({ addonName: "Larger storage", addonPrice: "+$2/mo" });
       }
       if (activeAddonsCard.checkbox3) {
-        setAddOnsData((prevState) => [
-          ...prevState,
-          {
-            addonName: "Customizable Profile",
-            addonPrice: "+$2/mo",
-          },
-        ]);
+        addonarray.push({
+          addonName: "Customizable Profile",
+          addonPrice: "+$2/mo",
+        });
       }
     }
+    const uniqueAddon = addonarray.filter((obj, index) => {
+      return (
+        index === addonarray.findIndex((o) => obj.addonName === o.addonName)
+      );
+    });
+    setAddOnsData(uniqueAddon);
     navigate("/Summary");
   };
 
@@ -106,6 +91,7 @@ const AddOnsForm = () => {
               type="checkbox"
               className="addon-checkbox"
               name="checkbox1"
+              checked={activeAddonsCard.checkbox1}
               onClick={handleCheckboxClick}
             />
             <div className="addon-info-container">
@@ -129,6 +115,7 @@ const AddOnsForm = () => {
               type="checkbox"
               className="addon-checkbox"
               name="checkbox2"
+              checked={activeAddonsCard.checkbox2}
               onClick={handleCheckboxClick}
             />
             <div className="addon-info-container">
@@ -152,6 +139,7 @@ const AddOnsForm = () => {
               type="checkbox"
               className="addon-checkbox"
               name="checkbox3"
+              checked={activeAddonsCard.checkbox3}
               onClick={handleCheckboxClick}
             />
             <div className="addon-info-container">

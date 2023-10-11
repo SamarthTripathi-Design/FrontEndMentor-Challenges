@@ -24,6 +24,7 @@ const ToggleSwitch = ({ label1, label2, onClick }) => {
           onClick={(e) => {
             onClick(e);
           }}
+          checked={yearly}
         />
         <label className="label" htmlFor={label1}>
           <span className="inner" />

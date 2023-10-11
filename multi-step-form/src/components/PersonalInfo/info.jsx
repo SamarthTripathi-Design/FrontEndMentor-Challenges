@@ -8,7 +8,7 @@ const Info = () => {
     <div className="card-container">
       <div className="card">
         <div className="sidebar-container">
-          <Sidebar />
+          <Sidebar step="step1" />
         </div>
         <div className="info-container">
           <InfoForm />

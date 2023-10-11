@@ -34,7 +34,6 @@ const SummaryForm = () => {
 
   return (
     <div className="form-container">
-      {console.log(addOnsData)}
       <div className="header-container">
         <h1 className="primary-heading">Finishing up</h1>
         <p className="page-info">
@@ -50,7 +49,9 @@ const SummaryForm = () => {
                   {activeCardData.imgInfo}
                   {yearly ? "(Yearly)" : "(Monthly)"}
                 </p>
-                <Link className="change">change</Link>
+                <Link to="/Plan" className="change">
+                  change
+                </Link>
               </div>
               <span className="plan-price">{activeCardData.price}</span>
             </div>

@@ -8,7 +8,7 @@ const Plan = () => {
     <div className="card-container">
       <div className="card">
         <div className="sidebar-container">
-          <Sidebar />
+          <Sidebar step="step2" />
         </div>
         <div className="info-container">
           <PlanForm />

@@ -5,9 +5,14 @@ import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
 const InfoForm = () => {
   const navigate = useNavigate();
-  const { yearly, setYearly, activeCardData, setActiveCardData } =
-    useContext(FormContext);
-  const [activeCard, setActiveCard] = useState("");
+  const {
+    yearly,
+    setYearly,
+    activeCardData,
+    setActiveCardData,
+    activeCard,
+    setActiveCard,
+  } = useContext(FormContext);
 
   const handleBackClick = () => {
     navigate("/PersonalInfo");

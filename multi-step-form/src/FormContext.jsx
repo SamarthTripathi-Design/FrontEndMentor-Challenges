@@ -11,6 +11,11 @@ export const FormContextProvider = ({ children }) => {
     imgInfo: "",
     price: "",
   });
+  const [formData, setFormData] = useState({
+    UserName: "",
+    Email: "",
+    PhoneNum: "",
+  });
   const [addOnsData, setAddOnsData] = useState([
     // { addonName: "Online service", addonPrice: "+$1/mo" },
     // { addonName: "Larger storage", addonPrice: "+$2/mo" },
@@ -19,6 +24,12 @@ export const FormContextProvider = ({ children }) => {
     //   addonPrice: "+$2/mo",
     // },
   ]);
+  const [activeAddonsCard, setactiveAddonsCard] = useState({
+    checkbox1: false,
+    checkbox2: false,
+    checkbox3: false,
+  });
+  const [activeCard, setActiveCard] = useState("");
 
   return (
     <FormContext.Provider
@@ -31,6 +42,12 @@ export const FormContextProvider = ({ children }) => {
         setActiveCardData,
         addOnsData,
         setAddOnsData,
+        activeAddonsCard,
+        setactiveAddonsCard,
+        formData,
+        setFormData,
+        activeCard,
+        setActiveCard,
       }}
     >
       {children}

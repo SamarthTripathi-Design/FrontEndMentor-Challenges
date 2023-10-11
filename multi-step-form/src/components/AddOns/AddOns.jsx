@@ -8,7 +8,7 @@ const AddOns = () => {
     <div className="card-container">
       <div className="card">
         <div className="sidebar-container">
-          <Sidebar />
+          <Sidebar step="step3" />
         </div>
         <div className="info-container">
           <AddOnsForm />

@@ -53,3 +53,9 @@
   font-weight: 700;
   color: var(--White);
 }
+
+.tab-active {
+  background-color: var(--Pastel-blue);
+  border: 1px solid var(--Pastel-blue);
+  color: var(--Marine-blue);
+}

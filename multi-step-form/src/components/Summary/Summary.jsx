@@ -8,7 +8,7 @@ const Summary = () => {
     <div className="card-container">
       <div className="card">
         <div className="sidebar-container">
-          <Sidebar />
+          <Sidebar step="step4" />
         </div>
         <div className="info-container">
           <SummaryForm />

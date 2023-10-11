@@ -30,7 +30,8 @@
 }
 
 .nameaddon,
-.totalname {
+.totalname,
+.change {
   font-size: 14px;
   color: var(--Cool-gray);
 }
