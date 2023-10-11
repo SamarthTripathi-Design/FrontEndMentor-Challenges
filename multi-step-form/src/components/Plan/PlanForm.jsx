@@ -9,7 +9,7 @@ const InfoForm = () => {
     useContext(FormContext);
   const [activeCard, setActiveCard] = useState("");
 
-  const handleBackclick = () => {
+  const handleBackClick = () => {
     navigate("/PersonalInfo");
   };
 
@@ -106,7 +106,7 @@ const InfoForm = () => {
         </div>
       </div>
       <div className="footer-container">
-        <button className="seconday-btn" onClick={handleBackclick}>
+        <button className="seconday-btn" onClick={handleBackClick}>
           Go Back
         </button>
         <button

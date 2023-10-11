@@ -1,0 +1,47 @@
+.addon-card-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.addon-card {
+  border: 1px solid var(--Light-gray);
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  align-items: center;
+}
+
+.addon-card:hover {
+  cursor: pointer;
+}
+
+.addon-checkbox {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.addon-heading {
+  color: var(--Marine-blue);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.addon-info {
+  color: var(--Cool-gray);
+  font-size: 13px;
+  margin: 5px 0px;
+}
+
+.addon-price {
+  color: var(--Purplish-blue);
+  font-size: 14px;
+}
+
+.addon-active {
+  border: 1px solid var(--Marine-blue);
+  cursor: pointer;
+}

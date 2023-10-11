@@ -1,0 +1,54 @@
+.summary-card {
+  background-color: var(--Alabaster);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.summary-line1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.plan-chosen,
+.plan-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--Marine-blue);
+}
+
+.line {
+  border: 1px solid var(--Light-gray);
+}
+
+.addon-line-container {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameaddon,
+.totalname {
+  font-size: 14px;
+  color: var(--Cool-gray);
+}
+
+.priceaddon {
+  font-size: 14px;
+  color: var(--Marine-blue);
+}
+
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.totalprice {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Purplish-blue);
+}

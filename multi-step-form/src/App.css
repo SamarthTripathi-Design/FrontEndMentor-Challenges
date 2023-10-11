@@ -60,13 +60,28 @@
   font-size: 14px;
   cursor: pointer;
   font-family: "Ubuntu", sans-serif;
+  outline: none;
+  border: none;
+}
+
+.primary-btn-confirm {
+  background-color: var(--Purplish-blue);
+  color: var(--White);
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  outline: none;
+  border: none;
 }
 
 .seconday-btn {
   outline: none;
   border: none;
   background-color: var(--White);
-  color: var(--Marine-blue);
+  color: var(--Cool-gray);
   padding: 12px 15px;
   border-radius: 10px;
   font-weight: 600;
