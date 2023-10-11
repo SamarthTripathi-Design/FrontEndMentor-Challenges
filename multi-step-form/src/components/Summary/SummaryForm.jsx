@@ -12,7 +12,9 @@ const SummaryForm = () => {
     calculateTotal();
   }, []);
 
-  const handleSubmitClick = () => {};
+  const handleSubmitClick = () => {
+    navigate("/Confirmation");
+  };
   const handleBackClick = () => {
     navigate("/AddOns");
   };

@@ -4,6 +4,7 @@ import Info from "./components/PersonalInfo/Info";
 import Plan from "./components/Plan/Plan";
 import AddOns from "./components/AddOns/AddOns";
 import Summary from "./components/Summary/Summary";
+import Confirmation from "./components/Confirmation/Confirmation";
 
 function App() {
   return (
@@ -13,8 +14,7 @@ function App() {
       <Route exact path="/Plan" Component={Plan} />
       <Route exact path="/AddOns" Component={AddOns} />
       <Route exact path="/Summary" Component={Summary} />
-
-      {/* <Route exact path="/" Component={Summary} /> */}
+      <Route exact path="/Confirmation" Component={Confirmation} />
     </Routes>
   );
 }
