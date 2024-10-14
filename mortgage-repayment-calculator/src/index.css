@@ -39,10 +39,12 @@ body {
 .mortgagecalc__card-right,
 .mortgagecalc__card-left {
   padding: 30px;
+  display: grid;
 }
 
 .mortgagecalc__card-left {
   color: var(--slate-900);
+  grid-template-rows: 1fr 2fr 2fr 1fr;
 }
 
 .mortgagecalc__card-right {
@@ -80,7 +82,7 @@ body {
 .calc-term {
   border-radius: 5px;
   outline: none;
-  height: 40px;
+  height: 45px;
   width: 100%;
   border: 1px solid black;
 }
@@ -94,7 +96,7 @@ body {
 .mortgagecalc__radio-div {
   border-radius: 5px;
   outline: none;
-  height: 40px;
+  height: 45px;
   width: 95%;
   border: 1px solid black;
   display: flex;
@@ -102,18 +104,55 @@ body {
   padding: 0px 10px;
 }
 
-.mortgagecalc__radio-label {
+.mortgagecalc__radio-value {
   padding-left: 10px;
 }
 
+.mortgagecalc__radio-label,
+.calc-ratelabel,
+.calc-termlabel,
+.calc-amountlabel {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
 .mortgagecalc__calculate-button {
-  border-radius: 15px;
+  border-radius: 50vw;
   outline: none;
-  height: 40px;
+  height: 50px;
   width: 70%;
   background-color: var(--Lime);
   color: var(--Slate-900);
   font-size: 16px;
   font-weight: 700;
   border: none;
+}
+
+.calc-amount-container,
+.calc-rate-container,
+.calc-term-container {
+  position: relative;
+}
+
+.pound-icon {
+  position: absolute;
+  background-color: var(--Slate-300);
+  font-size: 20px;
+  font-weight: 600;
+  top: 50%; /* Center vertically */
+  left: 1px; /* Adjust as needed */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Adjust width as needed */
+  height: 42px; /* Adjust height as needed */
+  border-radius: 4px; /* Optional: for rounded corners */
+  z-index: 1; /* Ensure it's on top of the input */
+}
+
+.calc-amount {
+  padding: 0px 0px 0px 60px; /* Add left padding to avoid overlap with icon */
+  box-sizing: border-box; /* Include padding in total width */
+  font-size: 16px; /* Font size */
 }

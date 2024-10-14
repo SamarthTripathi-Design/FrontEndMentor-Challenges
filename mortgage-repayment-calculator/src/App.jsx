@@ -10,29 +10,38 @@ function App() {
           <div className="mortgagecalc__input-container">
             <div className="mortgagecalc__amount">
               {/* <span className="mortgagecalc__pound">$</span> */}
-              <label htmlFor="amount">Mortgage Amount</label>
-              <input type="text" className="calc-amount" name="amount" />
+              <label htmlFor="amount" className="calc-amountlabel">
+                Mortgage Amount
+              </label>
+              <div className="calc-amount-container">
+                <span className="pound-icon">£</span>
+                <input type="text" className="calc-amount" name="amount" />
+              </div>
             </div>
             <div className="mortgagecal__termrate-container">
               <div className="momortgagecal__term">
-                <label htmlFor="amount">Mortgage Term</label>
+                <label htmlFor="amount" className="calc-termlabel">
+                  Mortgage Term
+                </label>
                 <input type="text" className="calc-term" name="term" />
               </div>
               <div className="momortgagecal__rate">
-                <label htmlFor="amount">Mortgage Rate</label>
+                <label htmlFor="amount" className="calc-ratelabel">
+                  Mortgage Rate
+                </label>
                 <input type="text" className="calc-rate" name="rate" />
               </div>
             </div>
           </div>
           <div className="mortgagecalc__radio-container">
-            <label>Mortgage Types</label>
+            <label className="mortgagecalc__radio-label">Mortgage Types</label>
             <div className="mortgagecalc__radio-div">
               <input type="radio" />
-              <span className="mortgagecalc__radio-label">Repayment</span>
+              <span className="mortgagecalc__radio-value">Repayment</span>
             </div>
             <div className="mortgagecalc__radio-div">
               <input type="radio" />
-              <span className="mortgagecalc__radio-label">Interest Only</span>
+              <span className="mortgagecalc__radio-value">Interest Only</span>
             </div>
           </div>
           <button className="mortgagecalc__calculate-button">
