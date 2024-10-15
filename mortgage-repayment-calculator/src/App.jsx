@@ -23,13 +23,19 @@ function App() {
                 <label htmlFor="amount" className="calc-termlabel">
                   Mortgage Term
                 </label>
-                <input type="text" className="calc-term" name="term" />
+                <div className="calc-term-container">
+                  <span className="years-text">years</span>
+                  <input type="text" className="calc-term" name="term" />
+                </div>
               </div>
               <div className="momortgagecal__rate">
                 <label htmlFor="amount" className="calc-ratelabel">
                   Mortgage Rate
                 </label>
-                <input type="text" className="calc-rate" name="rate" />
+                <div className="calc-rate-container">
+                  <span className="percent-text">%</span>
+                  <input type="text" className="calc-rate" name="rate" />
+                </div>
               </div>
             </div>
           </div>
@@ -44,9 +50,12 @@ function App() {
               <span className="mortgagecalc__radio-value">Interest Only</span>
             </div>
           </div>
-          <button className="mortgagecalc__calculate-button">
-            Calculate Repayments
-          </button>
+          <div className="mortgagecalc__button-container">
+            <span className="calculator"></span>
+            <button className="mortgagecalc__calculate-button">
+              Calculate Repayments
+            </button>
+          </div>
         </div>
         <div className="mortgagecalc__card-right">
           <div className="mortgagecalc__empty"></div>
