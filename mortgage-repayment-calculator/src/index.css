@@ -7,7 +7,9 @@
   --Slate-500: hsl(200, 26%, 54%);
   --Slate-700: hsl(200, 24%, 40%);
   --Slate-900: hsl(202, 55%, 16%);
+  --Slate-1000: hsl(202, 55%, 10%);
   --Lime: hsl(61, 70%, 52%);
+  --Lime2: hsl(61, 70%, 65%);
   --Lime-light: hsl(62, 90%, 95%);
   --Red: hsl(4, 69%, 50%);
 }
@@ -50,6 +52,7 @@ body {
 
 .mortgagecalc__card-right {
   background-color: var(--Slate-900);
+  border-bottom-left-radius: 100px;
 }
 
 .mortgagecalc__heading-container {
@@ -62,6 +65,7 @@ body {
   text-decoration: underline;
   color: var(--Slate-700);
   font-weight: 500;
+  cursor: pointer;
 }
 
 .mortgagecalc__heading-container,
@@ -240,4 +244,112 @@ input[type="number"] {
 .mortgagecalc__radio-div.checked {
   border-color: var(--Lime); /* Change border color */
   background-color: var(--Lime-light); /* Change background color */
+}
+
+.mortgagecalc__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mortgagecalc__empty-heading,
+.mortgagecalc__empty-info {
+  margin: 16px 0px 4px;
+  text-align: center;
+}
+
+.mortgagecalc__empty-heading {
+  color: var(--White);
+}
+
+.mortgagecalc__empty-info {
+  color: var(--Slate-100);
+  font-size: 15px;
+}
+
+.calc-amount:hover,
+.calc-rate:hover,
+.calc-term:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.mortgagecalc__radio-div:hover {
+  border: 1px solid var(--Lime);
+  cursor: pointer;
+}
+
+.mortgagecalc__calculate-button:hover {
+  background-color: var(--Lime2);
+  cursor: pointer;
+}
+
+.error-field {
+  color: red;
+  position: absolute;
+  font-size: 14px;
+}
+
+.error-icon {
+  background-color: red;
+}
+
+.error-input {
+  border: 1px solid red;
+}
+
+.mortgagecalc__active {
+  display: flex;
+  flex-direction: column;
+}
+
+.mortgagecalc__active-cardcontainer {
+  background-color: var(--Slate-1000);
+  height: 40%;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 1fr 0.2fr 1fr;
+  padding: 50px;
+}
+
+.cardtop-info,
+.cardbottom-info {
+  font-size: 15px;
+  color: var(--Slate-100);
+  margin-bottom: 10px;
+}
+
+.cardtop-info-amount {
+  color: var(--Lime);
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.mortgagecalc__active-cardtop,
+.mortgagecalc__active-cardbottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.martgagecalc__active-heading {
+  color: var(--White);
+}
+
+.mortgagecalc__active-info {
+  color: var(--Slate-100);
+}
+
+.cardbottom-info-amount {
+  color: var(--White);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.line {
+  display: flex;
+  align-self: center;
+  border-top: 1px solid var(--Slate-100);
 }
