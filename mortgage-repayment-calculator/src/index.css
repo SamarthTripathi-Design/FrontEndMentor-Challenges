@@ -213,9 +213,8 @@ body {
   background-color: var(--Lime);
 }
 
-.mortgagecalc__radio-input:checked {
-  background-color: var(--Lime); /* Change background color when checked */
-  border-color: var(--Lime);
+.mortgagecalc__radio-input {
+  accent-color: var(--Lime);
 }
 
 .mortgagecalc__button-container {
@@ -352,4 +351,22 @@ input[type="number"] {
   display: flex;
   align-self: center;
   border-top: 1px solid var(--Slate-100);
+}
+
+@media (max-width: 375px) {
+  .mortgagecalc__card {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    width: 90%;
+    height: 100%;
+  }
+  .mortgagecalc__card-right {
+    border-radius: 0px;
+  }
+
+  .mortgagecalc__calculate-button {
+    width: 100%;
+    font-size: 15px;
+  }
 }

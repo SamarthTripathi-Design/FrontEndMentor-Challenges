@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 
 const initialState = {
   amount: "",
@@ -42,6 +42,15 @@ function postReducer(state, action) {
 
 function App() {
   const [state, dispatch] = useReducer(postReducer, initialState);
+  useEffect(() => {
+    if (state.amount && state.rate && state.term) {
+      console.log("true", state.error);
+      dispatch({ type: "SET_RESULT", payload: true });
+    } else {
+      console.log("false", state.error);
+      dispatch({ type: "SET_RESULT", payload: false });
+    }
+  }, [state.error]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -90,13 +99,6 @@ function App() {
         payload: { field: "rate", hasError: false },
       });
     }
-    if (state.error.amount && state.error.term && state.error.rate) {
-      console.log("true", state.error);
-      dispatch({ type: "SET_RESULT", payload: true });
-    } else {
-      console.log("false", state.error);
-      dispatch({ type: "SET_RESULT", payload: false });
-    }
   };
 
   return (
@@ -117,7 +119,7 @@ function App() {
               <div className="calc-amount-container">
                 <span
                   className={
-                    state.error.rate ? "pound-icon error-icon" : "pound-icon"
+                    state.error.amount ? "pound-icon error-icon" : "pound-icon"
                   }
                 >
                   £
@@ -128,7 +130,9 @@ function App() {
                   onChange={handleChange}
                   type="number"
                   className={
-                    state.error.rate ? "calc-amount error-input" : "calc-amount"
+                    state.error.amount
+                      ? "calc-amount error-input"
+                      : "calc-amount"
                   }
                 />
               </div>
@@ -144,7 +148,7 @@ function App() {
                 <div className="calc-term-container">
                   <span
                     className={
-                      state.error.rate ? "years-text error-icon" : "years-text"
+                      state.error.term ? "years-text error-icon" : "years-text"
                     }
                   >
                     years
@@ -152,7 +156,7 @@ function App() {
                   <input
                     type="number"
                     className={
-                      state.error.rate ? "calc-term error-input" : "calc-term"
+                      state.error.term ? "calc-term error-input" : "calc-term"
                     }
                     name="term"
                     value={state.term}
