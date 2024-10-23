@@ -1,0 +1,23 @@
+@use "variables";
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: variables.$Light-gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", serif;
+}
+
+.comment__card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+  flex-direction: column;
+  background-color: aqua;
+}
