@@ -15,9 +15,10 @@ body {
 .comment__card-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   height: 100vh;
   width: 50vw;
   flex-direction: column;
   background-color: aqua;
+  gap: 10px;
 }

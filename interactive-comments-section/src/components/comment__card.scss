@@ -7,6 +7,7 @@
   padding: variables.$card-padding;
   align-items: center;
   justify-items: center;
+  border-radius: 10px;
 
   &-section1 {
     display: grid;
@@ -38,7 +39,44 @@
     font-weight: 500;
   }
 
-  &-button-container {
-    margin-left: auto;
+  &-avatar-time {
+    color: variables.$Grayish-Blue;
   }
+
+  &-button-container,
+  .button1,
+  .button2 {
+    margin-left: auto;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-button-reply,
+  &-button-Edit,
+  &-button-Delete {
+    background-color: variables.$White;
+    outline: none;
+    border: none;
+
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &-button-reply,
+  &-button-Edit {
+    color: variables.$Moderate-blue;
+  }
+  &-button-Delete {
+    color: variables.$Soft-Red;
+  }
+
+  &-info {
+    color: variables.$Grayish-Blue;
+  }
+}
+
+.reply-card {
+  width: 80%;
 }
