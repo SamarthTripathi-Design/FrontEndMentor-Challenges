@@ -1,6 +1,6 @@
 // import { useReducer } from "react";
 // import commentsJson from "../constant/data.json";
-import "./comment__card.scss";
+import "./commentcard.scss";
 
 // const InitialState = {
 //   data: commentsJson,
@@ -19,7 +19,9 @@ const CommentsCard = ({
   // const [state, dispatch] = useReducer(dataReducer, initialState);
 
   return (
-    <div className={replyingTo ? "comment__card reply-card" : "comment__card "}>
+    <div
+      className={replyingTo ? "comment__card commment-reply" : "comment__card "}
+    >
       <div className="comment__card-section1">
         <div className="comment__card-img1-container">
           <img src="../../images/icon-plus.svg" alt="icon-plus" />

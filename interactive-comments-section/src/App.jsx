@@ -1,6 +1,7 @@
 import CommentsCard from "./components/CommentsCard";
 // import { useReducer } from "react";
 import commentsJson from "./constant/data.json";
+import ReplyCard from "./components/ReplyCard";
 
 // const InitialState = {
 //   data: commentsJson,
@@ -22,6 +23,7 @@ function App() {
               avatar={item.user.image.png}
               replies={item.replies}
             />
+            <ReplyCard />
             {item.replies.length > 0 ? (
               item.replies.map((item) => {
                 return (

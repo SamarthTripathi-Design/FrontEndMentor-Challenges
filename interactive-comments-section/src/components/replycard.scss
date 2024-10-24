@@ -1,0 +1,12 @@
+@use "../variables";
+
+.reply__card {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  background-color: variables.$White;
+  padding: variables.$card-padding;
+  align-items: center;
+  justify-items: center;
+  border-radius: 10px;
+  width: 100%;
+}

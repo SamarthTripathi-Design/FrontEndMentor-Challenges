@@ -8,6 +8,7 @@
   align-items: center;
   justify-items: center;
   border-radius: 10px;
+  width: 100%;
 
   &-section1 {
     display: grid;
@@ -77,6 +78,6 @@
   }
 }
 
-.reply-card {
+.commment-reply {
   width: 80%;
 }
