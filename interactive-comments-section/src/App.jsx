@@ -1,13 +1,11 @@
 import CommentsCard from "./components/CommentsCard";
-// import { useReducer } from "react";
 import commentsJson from "./constant/data.json";
 import ReplyCard from "./components/ReplyCard";
-
-// const InitialState = {
-//   data: commentsJson,
-// };
+import CommentContext from "./context/CommentContext";
+import { useContext } from "react";
 
 function App() {
+  const { showReply } = useContext(CommentContext);
   return (
     <div className="comment__card-container">
       {commentsJson.comments.map((item) => {
@@ -23,7 +21,6 @@ function App() {
               avatar={item.user.image.png}
               replies={item.replies}
             />
-            <ReplyCard />
             {item.replies.length > 0 ? (
               item.replies.map((item) => {
                 return (
@@ -42,6 +39,7 @@ function App() {
             ) : (
               <></>
             )}
+            {showReply && <ReplyCard />}
           </>
         );
       })}

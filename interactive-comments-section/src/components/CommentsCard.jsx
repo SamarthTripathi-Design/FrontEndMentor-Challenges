@@ -1,10 +1,6 @@
-// import { useReducer } from "react";
-// import commentsJson from "../constant/data.json";
 import "./commentcard.scss";
-
-// const InitialState = {
-//   data: commentsJson,
-// };
+import { useContext } from "react";
+import CommentContext from "../context/CommentContext";
 
 const CommentsCard = ({
   id,
@@ -16,9 +12,11 @@ const CommentsCard = ({
   replies,
   replyingTo,
 }) => {
-  // const [state, dispatch] = useReducer(dataReducer, initialState);
-
-  const handleReply = () => {};
+  const { showReply, setShowReply } = useContext(CommentContext);
+  const handleReply = (replyingTo) => {
+    console.log(replyingTo);
+    // setShowReply(true);
+  };
 
   return (
     <div
@@ -49,7 +47,7 @@ const CommentsCard = ({
                 />
                 <button
                   className="comment__card-button-reply"
-                  onClick={handleReply}
+                  onClick={() => handleReply(replyingTo)}
                 >
                   Reply
                 </button>
@@ -73,7 +71,12 @@ const CommentsCard = ({
                     alt="icon-edit"
                   />
                 </div>
-                <button className="comment__card-button-Edit">Edit</button>
+                <button
+                  className="comment__card-button-Edit"
+                  onClick={() => handleReply(replyingTo)}
+                >
+                  Edit
+                </button>
               </div>
             </div>
           )}
