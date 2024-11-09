@@ -12,7 +12,8 @@ const CommentsCard = ({
   replies,
   replyingTo,
 }) => {
-  const { setShowReply, currentUser } = useContext(CommentContext);
+  const { setShowReply, currentUser, setShowModal } =
+    useContext(CommentContext);
   const handleReply = () => {
     setShowReply({ id, username });
   };
@@ -27,7 +28,7 @@ const CommentsCard = ({
         </div>
         <span className="comment__card-number">{score}</span>
         <div className="comment__card-img1-container">
-          <img src="../../public/images/icon-minus.svg" alt="icon-minus" />
+          <img src="/images/icon-minus.svg" alt="icon-minus" />
         </div>
       </div>
       <div className="comment__card-section2">
@@ -64,7 +65,14 @@ const CommentsCard = ({
                     alt="icon-delete"
                   />
                 </div>
-                <button className="comment__card-button-Delete">Delete</button>
+                <button
+                  className="comment__card-button-Delete"
+                  onClick={() => {
+                    setShowModal(true);
+                  }}
+                >
+                  Delete
+                </button>
               </div>
               <div className="button2">
                 <div className="comment__card-button-icon">

@@ -5,6 +5,7 @@ export const CommentContext = createContext();
 export const CommentProvider = ({ children }) => {
   const [showReply, setShowReply] = useState({ id: "", username: "" });
   const [replyComment, setReplyComment] = useState("");
+  const [showModal, setShowModal] = useState(false);
   const [currentUser, setCurrentUser] = useState({
     id: 4,
     image: {
@@ -87,6 +88,8 @@ export const CommentProvider = ({ children }) => {
         setCommentObj,
         replyComment,
         setReplyComment,
+        showModal,
+        setShowModal,
       }}
     >
       {children}

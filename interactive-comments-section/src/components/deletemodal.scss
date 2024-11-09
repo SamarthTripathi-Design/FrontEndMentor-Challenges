@@ -1,0 +1,62 @@
+@use "../variables";
+
+// .deletemodal__card {
+//   background-color: variables.$White;
+//   width: 50%;
+//   height: 20%;
+// }
+
+// Assuming you are using a main wrapper div for the modal
+.deletemodal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); // semi-transparent background
+  z-index: 1000; // to make sure it overlays other content
+}
+
+.deletemodal__card {
+  background-color: variables.$White;
+  width: 50%;
+  max-width: 380px;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.deletemodal__card-heading {
+  margin-bottom: 15px;
+  color: variables.$Dark-blue;
+}
+
+.deletemodal__card-body {
+  margin-bottom: 15px;
+  color: variables.$Grayish-Blue;
+}
+
+.deletemodal__card-buttoncontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.deletemodal__card-cancelbutton,
+.deletemodal__card-savebutton {
+  padding: 12px 30px;
+  color: variables.$White;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.deletemodal__card-savebutton {
+  background-color: variables.$Soft-Red;
+}
+
+.deletemodal__card-cancelbutton {
+  background-color: variables.$Dark-blue;
+}

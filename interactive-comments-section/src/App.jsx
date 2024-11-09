@@ -1,10 +1,11 @@
 import CommentsCard from "./components/CommentsCard";
+import DeleteModal from "./components/DeleteModal";
 import ReplyCard from "./components/ReplyCard";
 import CommentContext from "./context/CommentContext";
 import { useContext } from "react";
 
 function App() {
-  const { showReply, commentObj } = useContext(CommentContext);
+  const { showReply, commentObj, showModal } = useContext(CommentContext);
   return (
     <div className="comment__card-container">
       {commentObj.map((item) => {
@@ -56,6 +57,7 @@ function App() {
         );
       })}
       <ReplyCard send={true} />
+      {showModal && <DeleteModal />}
     </div>
   );
 }
