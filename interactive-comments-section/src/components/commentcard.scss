@@ -18,6 +18,15 @@
     border-radius: 10px;
   }
 
+  &-img1-container,
+  &-button-container {
+    cursor: pointer;
+  }
+
+  &-button-icon {
+    margin-right: 5px;
+  }
+
   &-sectiontop {
     display: flex;
     gap: 10px;
@@ -65,6 +74,7 @@
     gap: 5px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   &-button-reply,
@@ -98,4 +108,8 @@
 .replyingTo {
   color: variables.$Moderate-blue;
   margin-right: 3px;
+}
+
+.button1 {
+  margin-right: 10px;
 }

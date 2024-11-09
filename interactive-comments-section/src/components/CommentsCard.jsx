@@ -47,25 +47,25 @@ const CommentsCard = ({
             <div className="comment__card-button-container">
               <div className="comment__card-button-icon">
                 <img
-                  // src="../../public/images/icon-reply.svg"
-                  src="/images/icon-reply.svg"
+                  src="../../public/images/icon-reply.svg"
+                  //src="/images/icon-reply.svg"
                   alt="icon-reply"
                 />
-                <button
-                  className="comment__card-button-reply"
-                  onClick={handleReply}
-                >
-                  Reply
-                </button>
               </div>
+              <button
+                className="comment__card-button-reply"
+                onClick={handleReply}
+              >
+                Reply
+              </button>
             </div>
           ) : (
             <div className="comment__card-button-container">
               <div className="button1">
                 <div className="comment__card-button-icon">
                   <img
-                    // src="../../public/images/icon-delete.svg"
-                    src="/images/icon-delete.svg"
+                    src="../../public/images/icon-delete.svg"
+                    //src="/images/icon-delete.svg"
                     alt="icon-delete"
                   />
                 </div>
@@ -81,8 +81,8 @@ const CommentsCard = ({
               <div className="button2">
                 <div className="comment__card-button-icon">
                   <img
-                    // src="../../public/images/icon-edit.svg"
-                    src="/images/icon-edit.svg"
+                    src="../../public/images/icon-edit.svg"
+                    //src="/images/icon-edit.svg"
                     alt="icon-edit"
                   />
                 </div>
