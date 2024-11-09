@@ -41,7 +41,7 @@ export const CommentProvider = ({ children }) => {
       user: {
         image: {
           // png: "../../public/images/avatars/image-maxblagun.png",
-          png: "/public/images/avatars/image-maxblagun.png",
+          png: "/images/avatars/image-maxblagun.png",
           webp: "./images/avatars/image-maxblagun.webp",
         },
         username: "maxblagun",
