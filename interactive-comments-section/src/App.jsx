@@ -1,14 +1,13 @@
 import CommentsCard from "./components/CommentsCard";
-import commentsJson from "./constant/data.json";
 import ReplyCard from "./components/ReplyCard";
 import CommentContext from "./context/CommentContext";
 import { useContext } from "react";
 
 function App() {
-  const { showReply } = useContext(CommentContext);
+  const { showReply, commentObj } = useContext(CommentContext);
   return (
     <div className="comment__card-container">
-      {commentsJson.comments.map((item) => {
+      {commentObj.map((item) => {
         return (
           <>
             <CommentsCard
@@ -21,28 +20,42 @@ function App() {
               avatar={item.user.image.png}
               replies={item.replies}
             />
+            {showReply.id === item.id &&
+              showReply.username === item.user.username && (
+                <ReplyCard id={item.id} username={item.username} />
+              )}
             {item.replies.length > 0 ? (
               item.replies.map((item) => {
                 return (
-                  <CommentsCard
-                    key={item.id}
-                    id={item.id}
-                    score={item.score}
-                    createdAt={item.createdAt}
-                    content={item.content}
-                    username={item.user.username}
-                    avatar={item.user.image.png}
-                    replyingTo={item.replyingTo}
-                  />
+                  <>
+                    <CommentsCard
+                      key={item.id}
+                      id={item.id}
+                      score={item.score}
+                      createdAt={item.createdAt}
+                      content={item.content}
+                      username={item.user.username}
+                      avatar={item.user.image.png}
+                      replyingTo={item.replyingTo}
+                    />
+                    {showReply.id === item.id &&
+                      showReply.username === item.user.username && (
+                        <ReplyCard
+                          reply={true}
+                          id={item.id}
+                          username={item.username}
+                        />
+                      )}
+                  </>
                 );
               })
             ) : (
               <></>
             )}
-            {showReply && <ReplyCard />}
           </>
         );
       })}
+      <ReplyCard send={true} />
     </div>
   );
 }

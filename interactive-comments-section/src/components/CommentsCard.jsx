@@ -12,15 +12,14 @@ const CommentsCard = ({
   replies,
   replyingTo,
 }) => {
-  const { showReply, setShowReply } = useContext(CommentContext);
-  const handleReply = (replyingTo) => {
-    console.log(replyingTo);
-    // setShowReply(true);
+  const { setShowReply, currentUser } = useContext(CommentContext);
+  const handleReply = () => {
+    setShowReply({ id, username });
   };
 
   return (
     <div
-      className={replyingTo ? "comment__card commment-reply" : "comment__card "}
+      className={replyingTo ? "comment__card comment-reply" : "comment__card "}
     >
       <div className="comment__card-section1">
         <div className="comment__card-img1-container">
@@ -37,8 +36,11 @@ const CommentsCard = ({
             <img src={avatar} alt="avatar" />
           </div>
           <span className="comment__card-avatar-name">{username}</span>
+          {username === currentUser.username && (
+            <span className="comment__card-avatar-badge">You</span>
+          )}
           <span className="comment__card-avatar-time">{createdAt}</span>
-          {!replyingTo ? (
+          {username !== currentUser.username ? (
             <div className="comment__card-button-container">
               <div className="comment__card-button-icon">
                 <img
@@ -47,7 +49,7 @@ const CommentsCard = ({
                 />
                 <button
                   className="comment__card-button-reply"
-                  onClick={() => handleReply(replyingTo)}
+                  onClick={handleReply}
                 >
                   Reply
                 </button>
@@ -71,18 +73,16 @@ const CommentsCard = ({
                     alt="icon-edit"
                   />
                 </div>
-                <button
-                  className="comment__card-button-Edit"
-                  onClick={() => handleReply(replyingTo)}
-                >
-                  Edit
-                </button>
+                <button className="comment__card-button-Edit">Edit</button>
               </div>
             </div>
           )}
         </div>
         <div className="comment__card-sectionbottom">
-          <p className="comment__card-info">{content}</p>
+          <p className="comment__card-info">
+            {replyingTo && <span className="replyingTo">@{replyingTo}</span>}
+            {content}
+          </p>
         </div>
       </div>
     </div>

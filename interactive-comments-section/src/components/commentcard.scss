@@ -40,6 +40,14 @@
     font-weight: 500;
   }
 
+  &-avatar-badge {
+    background-color: variables.$Moderate-blue;
+    padding: 3px;
+    border-radius: 5px;
+    color: variables.$White;
+    font-size: 12px;
+  }
+
   &-avatar-time {
     color: variables.$Grayish-Blue;
   }
@@ -78,6 +86,11 @@
   }
 }
 
-.commment-reply {
+.comment-reply {
   width: 85%;
+}
+
+.replyingTo {
+  color: variables.$Moderate-blue;
+  margin-right: 3px;
 }
