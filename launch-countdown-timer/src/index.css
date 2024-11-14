@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../public/images/bg-stars.svg),
+    url(../public/images/pattern-hills.svg);
+  background-repeat: no-repeat, no-repeat;
+}
