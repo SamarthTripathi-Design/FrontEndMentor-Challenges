@@ -22,7 +22,7 @@ function Hero() {
         </article>
         <article className="hero-section-img-container">
           <img
-            src="../../public/images/illustration-hero.svg"
+            src="../../../public/images/illustration-hero.svg"
             alt="illustration-hero"
           />
           {/* <img src="/images/illustration-hero.svg" alt="illustration-hero" /> */}

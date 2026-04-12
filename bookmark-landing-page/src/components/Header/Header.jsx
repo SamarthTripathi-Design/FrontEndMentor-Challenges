@@ -6,7 +6,7 @@ const Header = () => {
       <header className="header">
         <div>
           <img
-            src="../../public/images/logo-bookmark.svg"
+            src="../../../public/images/logo-bookmark.svg"
             alt="Book-mark logo"
           />
           {/* <img src="/images/logo-bookmark.svg" alt="Book-mark logo" /> */}
@@ -28,17 +28,17 @@ const Header = () => {
           </ul>
           <ul>
             <li>
-              <img
-                src="../../public/images/icon-facebook.svg"
+              {/* <img
+                src="../../../public/images/icon-facebook.svg"
                 alt="icon-facebook"
-              />
+              /> */}
               {/* <img src="/images/icon-facebook.svg" alt="icon-facebook" /> */}
             </li>
             <li>
-              <img
-                src="../../public/images/icon-twitter.svg"
+              {/* <img
+                src="../../../public/images/icon-twitter.svg"
                 alt="icon-twitter"
-              />
+              /> */}
               {/* <img src="/images/icon-twitter.svg" alt="icon-twitter" /> */}
             </li>
           </ul>

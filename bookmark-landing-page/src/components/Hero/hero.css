@@ -1,5 +1,5 @@
 .hero-section {
-  padding: 80px 32px;
+  padding: 32px;
   display: flex;
   flex-direction: column-reverse;
   max-width: 1280px;
@@ -18,7 +18,7 @@
 .hero-bg {
   position: absolute;
   right: -20%;
-  height: 300px;
+  height: 180px;
   width: 100%;
   background-color: hsl(231, 69%, 60%);
   bottom: 0;
@@ -83,5 +83,16 @@
 
   .hero-section-heading {
     font-size: 52px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    right: -20%;
+    height: 300px;
+    width: 100%;
+    background-color: hsl(231, 69%, 60%);
+    bottom: 0;
+    z-index: -1;
+    border-radius: 200px 0px 0px 200px;
   }
 }
