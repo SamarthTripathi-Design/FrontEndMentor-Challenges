@@ -1,0 +1,21 @@
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-elements);
+  min-height: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 80px;
+}
+
+.navbar__toggle button {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  font-weight: 300;
+}
