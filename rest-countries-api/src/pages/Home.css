@@ -108,3 +108,27 @@
   font-size: 16px;
   font-weight: 600;
 }
+
+@media (max-width: 400px) {
+  .home__inputs {
+    flex-direction: column;
+    margin-bottom: 30px;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .input__container {
+    width: 100%;
+  }
+
+  .countries__grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 0px 30px;
+  }
+
+  .country__details {
+    padding: 30px 20px;
+  }
+}

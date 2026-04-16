@@ -77,7 +77,7 @@ function Details() {
             <span className="country__key">Border Countries: </span>
 
             <div className="border_container">
-              {country.borders.length > 1 &&
+              {country?.borders &&
                 country.borders.map((val) => (
                   <button onClick={() => navigate(`/country/${val}`)}>
                     {val}
